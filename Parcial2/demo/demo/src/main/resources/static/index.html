@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carros</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="JS/app.js"></script>
+</head>
+<body>
+<h1>Carros</h1>
+<table id ="tabla-carros">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Marca</th>
+    <th>Color</th>
+    <th>Precio</th>
+  </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+<button onclick="app.getCars()">Actualizar tabla</button>
+<button onclick="app.getById(2)">Actualizar por id tabla</button>
+<button onclick="app.tabla(app.getCars())" >Traer</button>
+
+<form id="nuevo-carro-form">
+  <label for="marca-input">Marca:</label>
+  <input type="text" id="marca-input" name="marca"><br><br>
+
+  <label for="color-input">Color:</label>
+  <input type="text" id="color-input" name="color"><br><br>
+
+  <label for="precio-input">Precio:</label>
+  <input type="number" id="precio-input" name="precio"><br><br>
+
+  <button onclick="app.saveCars()">Agregar carro</button>
+
+</form>
+
+</body>
+</html>
